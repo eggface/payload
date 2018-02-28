@@ -12,9 +12,9 @@ app.use(bodyParser.json({
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function (request, response) {
-    let resp = {
-      words: 'welcome',
-    };
+  let resp = {
+    words: 'welcome',
+  };
   response.send(resp);
 });
 
