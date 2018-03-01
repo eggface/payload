@@ -5,8 +5,8 @@ const inputMockup = require('./hometrack-sample-request.json');
 
 describe('Parser test', function () {
   it('should return good', function () {
-    const output = app.parser();
-    console.log(inputMockup);
+    const output = app.parser(inputMockup);
+    // console.log(inputMockup);
     expect(output).equal('good');
   });
 
