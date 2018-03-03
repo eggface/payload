@@ -1,0 +1,21 @@
+{
+    "payload": [
+        {
+            "address": {
+                "buildingNumber": "92",
+                "postcode": "2000",
+                "state": "NSW",
+                "street": "Pitt Street",
+                "suburb": "Sydney",
+                "unitNumber": "Suite 1 Level 8"
+            },
+            "propertyTypeId": 3,
+            "readyState": "complete",
+            "reference": "asdasd",
+            "shortId": "ZM73nE4nKH56",
+            "status": 4,
+            "type": "htv",
+            "workflow": "not completed"
+        }
+    ]
+}

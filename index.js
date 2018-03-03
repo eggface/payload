@@ -42,7 +42,7 @@ app.post('/fetchHtvCompleted', function (request, response) {
   }
 
   try{
-    console.log(request.body);
+    // console.log(request.body);
     const results = parser.parser(request.body);
     return response.status(200).send({ response: results });
   } catch (err){
