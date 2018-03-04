@@ -97,5 +97,4 @@ describe('Parser', function () {
     expect(results).to.be.an('array').that.is.empty;
   });
 
-
 });

@@ -1,4 +1,3 @@
-// import axios from 'axios';
 var express = require('express');
 var bodyParser = require('body-parser')
 var parser = require('./Parser');
@@ -13,36 +12,25 @@ app.use(bodyParser.json({
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function(err, request, response, next) {
   if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
-    // return response.status(400).send({ error: parser.ERR_PARSING_FAILED });
     return response.status(400).send({ error: parser.ERR_PARSING_FAILED });
   }
 });
 
+// GET
 app.get('/', function (request, response) {
   let resp = {
-    words: 'welcome',
+    greetings: 'Hometrack code test',
   };
   response.send(resp);
 });
 
-// app.post('/', function (request, response) {
-//   if (request.is('application/json')) {
-//     console.log(request.body);
-//     let resp = {
-//       surname: 'Wang',
-//     };
-//     return response.status(200).send(resp);
-//   }
-//   return response.status(400).send();
-// });
-
+// POST
 app.post('/fetchHtvCompleted', function (request, response) {
   if (!request.is('application/json')) {
     return response.status(400).send();
   }
 
   try{
-    // console.log(request.body);
     const results = parser.parser(request.body);
     return response.status(200).send({ response: results });
   } catch (err){

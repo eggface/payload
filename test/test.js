@@ -5,10 +5,6 @@ chai.use(require('chai-http'));
 const app = require('../index.js');
 const requestMockup = require('./hometrack-sample-request.json');
 
-// if(!module.parent) {
-//   app.listen();
-// }
-
 // BlackBox test
 describe('API endpoint', function () {
   this.timeout(5000);
@@ -27,7 +23,7 @@ describe('API endpoint', function () {
           expect(res).to.have.status(200);
           expect(res).to.be.json;
           expect(res.body).to.be.an('object');
-          expect(res.body.words).to.equal('welcome');
+          expect(res.body.greetings).to.equal('Hometrack code test');
         });
     });
   });
